@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPIRVCross", "SPIRVCross\SPIRVCross.csproj", "{E100931A-5EFE-40DA-97F9-ED7836AB950D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPIRVCross.Generator", "SPIRVCross.Generator\SPIRVCross.Generator.csproj", "{69E259FE-F144-4695-8979-C48B22952A6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPIRVCross.Test", "SPIRVCross.Test\SPIRVCross.Test.csproj", "{FD5141A1-A7FE-4775-9297-35317D09F27E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E100931A-5EFE-40DA-97F9-ED7836AB950D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E100931A-5EFE-40DA-97F9-ED7836AB950D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E100931A-5EFE-40DA-97F9-ED7836AB950D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E100931A-5EFE-40DA-97F9-ED7836AB950D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E259FE-F144-4695-8979-C48B22952A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E259FE-F144-4695-8979-C48B22952A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E259FE-F144-4695-8979-C48B22952A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E259FE-F144-4695-8979-C48B22952A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD5141A1-A7FE-4775-9297-35317D09F27E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5141A1-A7FE-4775-9297-35317D09F27E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5141A1-A7FE-4775-9297-35317D09F27E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5141A1-A7FE-4775-9297-35317D09F27E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

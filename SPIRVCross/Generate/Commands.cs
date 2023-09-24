@@ -513,9 +513,9 @@ namespace SPIRVCross
 		}
 
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		private delegate spvc_result  PFN_spvc_resources_get_resource_list_for_type(spvc_resources resources, spvc_resource_type type, spvc_reflected_resource* resource_list, nuint* resource_size);
+		private delegate spvc_result  PFN_spvc_resources_get_resource_list_for_type(spvc_resources resources, spvc_resource_type type, spvc_reflected_resource** resource_list, nuint* resource_size);
 		private static readonly PFN_spvc_resources_get_resource_list_for_type spvc_resources_get_resource_list_for_type_ = LoadFunction<PFN_spvc_resources_get_resource_list_for_type>(nameof(spvc_resources_get_resource_list_for_type));
-		public static spvc_result spvc_resources_get_resource_list_for_type(spvc_resources resources, spvc_resource_type type, spvc_reflected_resource* resource_list, nuint* resource_size)
+		public static spvc_result spvc_resources_get_resource_list_for_type(spvc_resources resources, spvc_resource_type type, spvc_reflected_resource** resource_list, nuint* resource_size)
 		{
 			return spvc_resources_get_resource_list_for_type_(resources, type, resource_list, resource_size);
 		}

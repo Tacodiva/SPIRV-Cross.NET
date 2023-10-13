@@ -85,7 +85,7 @@ namespace SPIRVCross
 
             static string GetNativeAssemblyPath(string osPlatform, string architecture, string libraryName)
             {
-                var assemblyLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                var assemblyLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
 
                 var paths = new[]
                 {

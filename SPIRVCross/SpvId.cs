@@ -14,7 +14,7 @@ namespace SPIRVCross
 
         public bool Equals(SpvId other) => Value.Equals(other.Value);
 
-        public override bool Equals(object obj) => obj is SpvId other && Equals(other);
+        public override bool Equals(object? obj) => obj is SpvId other && Equals(other);
 
         public override int GetHashCode() => Value.GetHashCode();
 

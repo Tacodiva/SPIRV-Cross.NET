@@ -62,7 +62,7 @@ internal unsafe static class Program {
 
         // Do some basic reflection.
         spvc_compiler_create_shader_resources(compiler_glsl, &resources);
-        spvc_resources_get_resource_list_for_type(resources, spvc_resource_type.PushConstant, (spvc_reflected_resource*)&list, &count);
+        spvc_resources_get_resource_list_for_type(resources, spvc_resource_type.PushConstant, &list, &count);
 
 
         var model = spvc_compiler_get_execution_model(compiler_glsl);

@@ -9,11 +9,20 @@
   <ItemGroup>
 		<None Include="runtimes/win-x64/native/libspirv-cross-c-shared.dll">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<TargetPath>runtimes/win-x64/native/libspirv-cross-c-shared.dll</TargetPath>
+			<TargetPath>libspirv-cross-c-shared.dll</TargetPath>
 		</None>
+		<None Include="runtimes/win-x64/native/libgcc_s_seh-1.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>libgcc_s_seh-1.dll</TargetPath>
+		</None>
+		<None Include="runtimes/win-x64/native/libstdc++-6.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>libstdc++-6.dll</TargetPath>
+		</None>
+		
 		<None Include="runtimes/linux-x64/native/libspirv-cross-c-shared.so">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<TargetPath>runtimes/linux-x64/native/libspirv-cross-c-shared.so</TargetPath>
+			<TargetPath>libspirv-cross-c-shared.so</TargetPath>
 		</None>
 	</ItemGroup>
 </Project>

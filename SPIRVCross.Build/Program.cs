@@ -169,13 +169,17 @@ Task("Build")
                 );
 
                 CreateDirectory(spirvCrossOutput.Combine("runtimes/win-x64/native"));
-                DockerCp(
-                    $"{containerID}:{EscapeFile(containerBuildPath.CombineWithFilePath("libspirv-cross-c-shared.dll"))}",
-                    EscapeDir(MakeAbsolute(spirvCrossOutput.Combine("runtimes/win-x64/native"))),
-                    new() {
-                        FollowLink = true
-                    }
-                );
+                void CopyLibraryToHost(FilePath src) {
+                    DockerCp(
+                        $"{containerID}:{EscapeFile(src)}",
+                        EscapeDir(MakeAbsolute(spirvCrossOutput.Combine("runtimes/win-x64/native"))),
+                        new() { FollowLink = true }
+                    );
+                }
+
+                CopyLibraryToHost(containerBuildPath.CombineWithFilePath("libspirv-cross-c-shared.dll"));
+                CopyLibraryToHost("/usr/lib/gcc/x86_64-w64-mingw32/10-win32/libgcc_s_seh-1.dll");
+                CopyLibraryToHost("/usr/lib/gcc/x86_64-w64-mingw32/10-win32/libstdc++-6.dll");
             }
         } finally {
             Information($"Removing container...");

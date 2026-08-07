@@ -40,6 +40,28 @@ public static partial class CsCodeGenerator {
 
         };
 
+    public static void Generate(string headerPath, string outputPath) {
+        var options = new CppParserOptions {
+            ParseMacros = true,
+        };
+
+        var compilation = CppParser.ParseFile(headerPath, options);
+
+        // Print diagnostic messages
+        if (compilation.HasErrors) {
+            foreach (var message in compilation.Diagnostics.Messages) {
+                if (message.Type == CppLogMessageType.Error) {
+                    var currentColor = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(message);
+                    Console.ForegroundColor = currentColor;
+                }
+            }
+        } else {
+            Generate(compilation, outputPath);
+        }
+    }
+
     public static void Generate(CppCompilation compilation, string outputPath) {
         GenerateConstants(compilation, outputPath);
         GenerateEnums(compilation, outputPath);

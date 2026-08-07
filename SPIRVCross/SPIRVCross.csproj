@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+		<None Include="runtimes/win-x64/native/libspirv-cross-c-shared.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>runtimes/win-x64/native/libspirv-cross-c-shared.dll</TargetPath>
+		</None>
+		<None Include="runtimes/linux-x64/native/libspirv-cross-c-shared.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>runtimes/linux-x64/native/libspirv-cross-c-shared.so</TargetPath>
+		</None>
+	</ItemGroup>
 </Project>

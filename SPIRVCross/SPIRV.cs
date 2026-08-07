@@ -14,7 +14,7 @@ namespace SPIRVCross
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                return LibraryLoader.LoadLocalLibrary("spirv-cross-c-shared.dll");
+                return LibraryLoader.LoadLocalLibrary("libspirv-cross-c-shared.dll");
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
